@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using Aulas.Models;
 
 namespace Aulas.Controller
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class PlataformaController
     {
         private Menu _menuState;
@@ -15,15 +11,12 @@ namespace Aulas.Controller
         
         public PlataformaController()
         {
-            //_menuState = Menu.Idle;
-            //_opcao = -1;
+           
         }
 
         public void InicializarPlataformaController()
         {
-            float f; 
             
-
             while (_menuState != Menu.Sair)
             {
                 Console.Clear();
@@ -38,19 +31,20 @@ namespace Aulas.Controller
                 {
                     _menuState = Menu.Invalido;
                     Console.WriteLine("Not OK!");
-                    Console.WriteLine("Prima um número relativo à opções existentes!");
+                    Console.WriteLine("Prima um número relativo às opções existentes!");
                     Console.ReadLine();
                 }
 
                 switch (_menuState)
                 {
                         case Menu.InserirArtigo:
-                            int _quat;
+                            int quat;
+                            float preco;
                             Console.WriteLine("Nome do Artigo");
                             string art = Console.ReadLine();
                             Console.WriteLine("Preço do Artigo");
                             string pre = Console.ReadLine();
-                            while (!float.TryParse(pre,out f))
+                            while (!float.TryParse(pre,out preco))
                             {
                                 Console.WriteLine("Escreva o preço com casas decimais!");
                                 pre = Console.ReadLine();
@@ -58,13 +52,14 @@ namespace Aulas.Controller
                         
                             Console.WriteLine("Quantidade");
                             string qt = Console.ReadLine();
-                            while(!int.TryParse(qt, out _quat))
+                            while(!int.TryParse(qt, out quat))
                             {
                                 Console.WriteLine("Escreva a quantidade em número!");
                                 qt = Console.ReadLine();
                             }
                             
-                            Artigo a = new Artigo(art,f,_quat);
+                            Artigo a = new Artigo(art,preco,quat);
+                            
                             ac.InserirArtigo(a);
                             Console.WriteLine("Sucesso!");
                             Console.ReadKey();
@@ -90,6 +85,7 @@ namespace Aulas.Controller
 
                         default:
                             Console.WriteLine("Opção Inválida!");
+                            Console.ReadKey();
                             break;
                 }
             }
