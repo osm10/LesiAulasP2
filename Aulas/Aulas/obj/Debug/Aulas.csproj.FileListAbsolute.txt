@@ -9,3 +9,8 @@ C:\Users\Oliver\Desktop\PROG2017\Aulas\Aulas\obj\Debug\Aulas.pdb
 C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\bin\Debug\Aulas.exe.config
 C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\obj\Debug\Aulas.exe
 C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\obj\Debug\Aulas.pdb
+C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\bin\Debug\Aulas.exe
+C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\bin\Debug\Aulas.pdb
+C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\bin\Debug\CalculadoraIva.dll
+C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\bin\Debug\CalculadoraIva.pdb
+C:\Users\Oliver\Source\Repos\Mtp\Aulas\Aulas\obj\Debug\Aulas.csprojResolveAssemblyReference.cache
