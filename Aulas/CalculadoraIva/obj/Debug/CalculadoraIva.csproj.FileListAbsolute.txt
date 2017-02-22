@@ -1,0 +1,5 @@
+C:\Users\Oliver\Desktop\PROG2017\Aulas\CalculadoraIva\bin\Debug\CalculadoraIva.dll
+C:\Users\Oliver\Desktop\PROG2017\Aulas\CalculadoraIva\bin\Debug\CalculadoraIva.pdb
+C:\Users\Oliver\Desktop\PROG2017\Aulas\CalculadoraIva\obj\Debug\CalculadoraIva.csprojResolveAssemblyReference.cache
+C:\Users\Oliver\Desktop\PROG2017\Aulas\CalculadoraIva\obj\Debug\CalculadoraIva.dll
+C:\Users\Oliver\Desktop\PROG2017\Aulas\CalculadoraIva\obj\Debug\CalculadoraIva.pdb
