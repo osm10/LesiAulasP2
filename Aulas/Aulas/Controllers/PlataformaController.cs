@@ -1,17 +1,18 @@
 ﻿using System;
+using Aulas.Controller;
 using Aulas.Models;
 
-namespace Aulas.Controller
+namespace Aulas.Controllers
 {
     public class PlataformaController
     {
         private Menu _menuState;
+        private ArtigoController _artigoController;
         
-        ArtigoController ac = new ArtigoController();
         
         public PlataformaController()
         {
-           
+              _artigoController = new ArtigoController();
         }
 
         public void InicializarPlataformaController()
@@ -60,13 +61,13 @@ namespace Aulas.Controller
                             
                             Artigo a = new Artigo(art,preco,quat);
                             
-                            ac.InserirArtigo(a);
+                            _artigoController.InserirArtigo(a);
                             Console.WriteLine("Sucesso!");
-                            Console.ReadKey();
+                            //Console.ReadKey();
                             break;
 
                         case Menu.ListarArtigo:
-                            ac.ListarArtigos();
+                            _artigoController.ListarArtigos();
                             Console.ReadKey();
                             break;
 
@@ -74,20 +75,24 @@ namespace Aulas.Controller
                         
                             Console.WriteLine("Nome do Artigo");
                             string nome = Console.ReadLine();
-                            while (!ac.RemoverArtigo(nome))
+                            while (!_artigoController.RemoverArtigo(nome))
                             {
                                 Console.WriteLine("Escreva o nome do artigo que esteja na lista!");
                                 nome = Console.ReadLine();
                             }
                             Console.WriteLine("O artigo foi removido com sucesso!");
-                            Console.ReadKey();
+                            //Console.ReadKey();
+                            break;
+                        case Menu.Sair:
                             break;
 
-                        default:
+                        case Menu.Invalido:
+                                default:
                             Console.WriteLine("Opção Inválida!");
-                            Console.ReadKey();
+                            
                             break;
                 }
+                Console.ReadKey();
             }
         }
     }

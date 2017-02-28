@@ -10,17 +10,19 @@ namespace Aulas.Models
         /// </summary>
         /// <param name="nome">Nome do artigo</param>
         /// <param name="preco">Preço do artigo</param>
-        /// <param name="quant">Quantidade do artigo</param>
-        public Artigo(string nome, float preco, int quant)
+        /// <param name="id">Identificador do artigo</param>
+        public Artigo(string nome, float preco, int id)
         {
             Nome = nome;
             Preco = preco;
-            Quantidade = quant;
+            Identificador = id;
         }
 
         public string Nome{ get; set; }
 
         public float Preco { get; set; }
+
+        public int Identificador { get; set; }
 
         private string _descricao;
 
