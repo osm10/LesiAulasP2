@@ -1,16 +1,16 @@
 ﻿using System;
-using Aulas.Controller;
+using Aulas.Controllers;
 using Aulas.Models;
 
-namespace Aulas.Controllers
+namespace Aulas.View
 {
-    public class PlataformaController
+    public class PlataformaView
     {
         private Menu _menuState;
         private ArtigoController _artigoController;
         
         
-        public PlataformaController()
+        public PlataformaView()
         {
               _artigoController = new ArtigoController();
         }

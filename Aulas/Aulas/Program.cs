@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Aulas.Controllers;
+using Aulas.View;
 
 namespace Aulas
 {

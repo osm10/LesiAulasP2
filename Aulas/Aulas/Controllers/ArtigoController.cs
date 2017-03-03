@@ -34,6 +34,31 @@ namespace Aulas.Controllers
             return false;
         }
 
+
+        /// <summary>
+        /// Remove um artigo da lista pelo id do artigo
+        /// </summary>
+        /// <param name="idArtigo">Id do artigo</param>
+        /// <returns>Devolve true se encontrar e remover artigo</returns>
+        public bool RemoverArtigo(int idArtigo)
+        {
+            Artigo artigoRemover = null;
+            foreach (Artigo artigo in _artigoList)
+            {
+                if (artigo.Identificador == idArtigo)
+                {
+                    artigoRemover = artigo;
+                    break;
+                }
+            }
+            if (artigoRemover != null)
+            {
+                _artigoList.Remove(artigoRemover);
+                return true;
+            }
+            return false;
+        }
+
         public void ListarArtigos()
         {
             if (_artigoList.Count > 0)

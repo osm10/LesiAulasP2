@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Controllers\ArtigoController.cs" />
     <Compile Include="Controllers\OrcamentoContraller.cs" />
-    <Compile Include="Controllers\PlataformaController.cs" />
+    <Compile Include="View\PlataformaView.cs" />
     <Compile Include="Models\Artigo.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Orcamento.cs" />
