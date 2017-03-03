@@ -9,9 +9,9 @@ namespace Aulas.Controllers
     {
         private List<Artigo> _artigoList; 
 
-        public ArtigoController()
+        public ArtigoController(string listarArtigos = "")
         {
-                _artigoList = new List<Artigo>();
+                //_artigoList = new List<Artigo>();
         }
         public void InserirArtigo(Artigo a)
         {

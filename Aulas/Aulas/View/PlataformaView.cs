@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using Aulas.Controllers;
 using Aulas.Models;
+using Newtonsoft.Json;
 
 namespace Aulas.View
 {
@@ -8,6 +10,7 @@ namespace Aulas.View
     {
         private Menu _menuState;
         private ArtigoController _artigoController;
+        private string _serilization;
         
         
         public PlataformaView()
@@ -15,6 +18,11 @@ namespace Aulas.View
               _artigoController = new ArtigoController();
         }
 
+        public void OpcaoGuardar()
+        {
+            _serilization = JsonConvert.SerializeObject(_artigoController.GetArtigos());
+            Debug.WriteLine(_serilization);
+        }
         public void InicializarPlataformaController()
         {
             
@@ -25,6 +33,7 @@ namespace Aulas.View
                 Console.WriteLine("1 - Para Inserir um Artigo");
                 Console.WriteLine("2 - Para Listar os Artigos");
                 Console.WriteLine("3 - Para Remover um Artigo");
+                Console.WriteLine("4 - Para Guardar");
                 Console.WriteLine((int)Menu.Sair+" - Para sair");
                 string opcao = Console.ReadLine();
 
@@ -50,6 +59,11 @@ namespace Aulas.View
                                 Console.WriteLine("Escreva o preço com casas decimais!");
                                 pre = Console.ReadLine();
                             }
+
+                            //do
+                            //{
+                                
+                            //} while (!float.TryParse(pre,out preco));
                         
                             Console.WriteLine("Quantidade");
                             string qt = Console.ReadLine();
